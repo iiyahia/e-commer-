@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+
+    
+       
+      
+
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/s.css">
+    <link rel="stylesheet"href="css/all.css">
+</head>
+<body>
+   
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+        <div class="ml-auto">
+           <div >
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              </li> 
+                 <li class="nav-item">
+                <a class="nav-link" href="#products">products</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#best-selling">Latest products</a>
+              </li>
+          
+
+            
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Pages
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#Order">Order</a></li>
+                  
+                  <li><a class="dropdown-item" href="#services">services</a></li> 
+                  <li><a class="dropdown-item" href="#About">About</a></li>
+          </ul>
+        </li>
+
+           
+              </div>
+               <div class="ml-auto">
+                <button class="btn btn-primary cart-icon cart-icon position-relative ms-auto me-2 bg-white rounded-circle d-flex align-items-center justify-content-center style="width: 50px; height: 50px; data-bs-toggle="modal" data-bs-target="#cartModal">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+                
+            
+          
+<!-- Modal 2-->
+<div class="modal fade" id="cartModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-end">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">cart</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
+      </div>
+      <div class="modal-body" id="cartItems">
+        <img src="" alt="">
+      
+      </div>
+      <div class="modal-footer d-flex justify-content-between">
+        <strong id="totalPrice">Total: 0 $</strong>
+        <button class="btn btn-success" onclick="confirmOrder()">confirmedOrders</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+    
+
+      </nav>
+
+      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="img/1.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="img/2.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="img/3.jpg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <i class="fa-solid fa-angles-left myicon"></i>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <i class="fa-solid fa-angles-right myicon" ></i>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div> 
+      
+      <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel" >
+<div class="offcanvas-header">
+
+        
+          <h5 class="offcanvas-title" id="offcanvasExampleLabel">Requests</h5>
+         
+
+      
+     
+      </div>
+
+
+      <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasExampleLabel">Requests</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <div id="cart-items">
+          
+          </div>
+          <button id="complete-order" class="btn btn-primary w-100">Complete your purchase</button>
+        </div>
+      </div>
+      
+
+
+
+
+          <button class="btn1">
+            Complete your purchase
+          </button>
+
+
+        </div>
+      </div>
+</div>
+
+<section id="products" class="text-center mt-4">
+
+  <div class="d-flex justify-content-center">
+    <h2 class="text-header">products</h2>
+  </div>
+
+ 
+<br>
+
+  <br>
+
+  <div class="container  xgrid">
+    <div class="d-flex justify-content-evenly flex-wrap xgrid">
+      
+      <!-- card 1 -->
+      <div class="card  .mostsales m-2 p-0 text-center m-2" style="width: 15rem;">
+        <img src="img/4.jpg" class="card-img-top "   data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <div class="card-body"></div>
+        <div class="star mt-1 mb-2">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+        <h5 class="card-title">watch</h5>
+        <p class="card-text">100$</p>
+        <button class="btn btn-primary p-2 w-25% h-50%  add-to-cart   "data-name="watch 1"data-price="100$" data-img="img/4.jpg " add>  <span>Add to cart</span> <i class="fa-solid fa-cart-shopping"></i></button>
+      </div>
+
+      <!-- card 2 -->
+      <div class="card  .mostsales m-2 p-0 text-center m-2" style="width: 15rem;">
+        <img src="img/5.jpg" class="card-img-top" data-bs-toggle="modal" data-bs-target="#exampleModal" >
+        <div class="card-body"></div>
+        <div class="star mt-1 mb-2">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+        <h5 class="card-title">watch</h5>
+        <p class="card-text">100$</p>
+        <button class="btn btn-primary p-2   add-to-cart   "data-name="watch 5"data-price="100$" data-img="img/5.jpg"add>  <span>Add to cart</span> <i class="fa-solid fa-cart-shopping"></i></button>
+      </div>
+
+      <!-- card 3 -->
+      <div class="card new  m-2 p-0 text-center m-2" style="width: 15rem;">
+        <img src="img/6.jpg" class="card-img-top"  data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <div class="card-body"></div>
+        <div class="star mt-1 mb-2">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+        <h5 class="card-title">watch</h5>
+        <p class="card-text">100$</p>
+        <button class="btn btn-primary p-2   add-to-cart   "data-name="watch 6"data-price="100$" data-img="img/6.jpg"add>  <span>Add to cart</span> <i class="fa-solid fa-cart-shopping"></i></button>
+      </div>
+
+      <!-- card 4 -->
+      <div class="card new  m-2  p-0 text-center m-2" style="width: 15rem;">
+        <img src="img/7.jpg" class="card-img-top"  data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <div class="card-body"></div>
+        <div class="star mt-1 mb-2">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+        <h5 class="card-title">watch</h5>
+        <p class="card-text">100$</p>
+        <button class="btn btn-primary p-2   add-to-cart   "data-name="watch 7"data-price="100$" data-img="img/7.jpg"add>  <span>Add to cart</span> <i class="fa-solid fa-cart-shopping"></i></button>
+      </div>
+
+      <!-- card 5 -->
+      <div class="card discounts  m-2 p-0 text-center m-2" style="width: 15rem;">
+        <img src="img/8.jpg" class="card-img-top"  data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <div class="card-body"></div>
+        <div class="star mt-1 mb-2">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+        <h5 class="card-title">watch</h5>
+        <p class="card-text">100$</p>
+        <button class="btn btn-primary p-2   add-to-cart   "data-name="watch 8"data-price="100$" data-img="img/8.jpg"add>  <span>Add to cart</span> <i class="fa-solid fa-cart-shopping"></i></button>
+      </div>
+
+      <!-- card 6 -->
+      <div class="card  discounts  m-2 p-0 text-center m-2" style="width: 15rem;">
+        <img src="img/9.jpg" class="card-img-top"  data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <div class="card-body"></div>
+        <div class="star mt-1 mb-2">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+        <h5 class="card-title">watch</h5>
+        <p class="card-text">150$</p>
+        <button class="btn btn-primary p-2   add-to-cart   "data-name="watch 9"data-price="100$" data-img="img/9.jpg"add>  <span>Add to cart</span> <i class="fa-solid fa-cart-shopping"></i></button>
+      </div>
+
+     
+
+</section>
+
+
+
+
+
+<section id="best-selling" class="#best-selling">
+  <div class="container">
+  <div class="container border border-2 mt-5 rounded  ">
+  <div class="container-fluid my-5 d-grid justify-content-evenly  ">
+    
+    <div class="row d-flex justify-content-evenly ">
+  
+      <div class="col-5 ">
+
+
+
+    
+  
+      <!--  Best Seller -->
+     
+
+        <h3 class="text-center mb-3  text-header   d-inline-block mt-3">Best Seller</h3>
+        
+        
+        <div class="card mb-3">
+          <div style="height: 30vh; ">
+            <img src="img/5.jpg" class="card-img-top"  alt="Watch">
+          </div>
+          <div class="card-body text-center">
+            <p class="card-text">Watch</p>
+            <p class="card-text text-primary fw-bold">$120</p>
+            <button class="btn btn-primary p-2   add-to-cart   "data-name="watch 5"data-price="120$" data-img="img/5.jpg"add>  <span>Add to cart</span> <i class="fa-solid fa-cart-shopping"></i></button>
+          </div>
+        </div>
+        
+
+        <div class="card mb-3">
+          <div style="height: 30vh; ">
+            <img src="img/5.jpg" class="card-img-top"  alt="Watch">
+          </div>
+          <div class="card-body text-center">
+            <p class="card-text">Watch</p>
+            <p class="card-text text-primary fw-bold">$120</p>
+            <button class="btn btn-primary p-2   add-to-cart   "data-name="watch 5"data-price="120$" data-img="img/5.jpg"add>  <span>Add to cart</span> <i class="fa-solid fa-cart-shopping"></i></button>
+          </div>
+        </div>
+    
+      </div>
+    
+ 
+    
+ 
+      <!-- Offers -->
+      <div class="col-6">
+
+        <h3 class="text-center mb-3  text-header   d-inline-block mt-3">Offers</h3>
+        
+        
+        <div class="card mb-3">
+          <div style="height: 30vh; ">
+            <img src="img/7.jpg" class="card-img-top"  alt="Watch">
+          </div>
+          <div class="card-body text-center">
+            <p class="card-text">Watch</p>
+            <p class="card-text text-primary fw-bold">$90</p>
+            <button class="btn btn-primary p-2   add-to-cart   "data-name="watch 7"data-price="90$" data-img="img/7.jpg"add>  <span>Add to cart</span> <i class="fa-solid fa-cart-shopping"></i></button>
+          </div>
+        </div>
+    
+
+        <div class="card mb-3">
+          <div style="height: 30vh; ">
+            <img src="img/7.jpg" class="card-img-top "  alt="Watch">
+          </div>
+          <div class="card-body text-center">
+            <p class="card-text">Watch</p>
+            <p class="card-text text-primary fw-bold">$90</p>
+            <button class="btn btn-primary p-2   add-to-cart   "data-name="watch 7"data-price="90$" data-img="img/7.jpg"add>  <span>Add to cart</span> <i class="fa-solid fa-cart-shopping"></i></button>
+          </div>
+        </div>
+    
+
+      </div>
+  
+    </div>
+  </div>
+  </div>
+  </div>
+</section>
+
+
+<div id="orderSuccess" class="toast align-items-center text-white bg-success border-0 position-fixed bottom-0 end-0 m-3" role="alert">
+  <div class="d-flex">
+    <div class="toast-body">
+      ✅ Order delivered!
+    </div>
+    <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+  </div>
+</div>
+
+
+
+<section id="services">
+<div class="container mt-5">
+  <div class="d-flex justify-content-center" >
+<h2 class="d-inline-block text-header "> Our services</h2>
+</div>
+<div class="row  text-center" dir="ltr">
+
+<div class="col-md-6 col-sm-12   text-center">
+    <h5  class="text-danger">Online Retail Sales</h5>
+ <iframe src="https://lottie.host/embed/60cd6ccc-1e8b-4881-9455-ee63c21260f3/yz7jjiWnfg.lottie" width="100% " height="100%"></iframe> 
+ 
+</div>
+  <div class="col-md-5 pt-5  text-center"> 
+    <p>We offer a wide range of electronic products, including smartphones, tablets, laptops, and accessories—all at competitive prices and guaranteed quality. Browse and order easily through our website or mobile app.</p>
+  </div>
+</div>
+<br>
+<br>
+
+<div class="row "  dir="rtl">
+
+  <div class="col-md-6 col-sm-12   text-center">
+      <h5  class="text-danger">Fast Delivery Service</h5>
+   <iframe src="https://lottie.host/embed/b7d2b419-c8ce-42a5-9df4-7ee75f5a9b9f/UVJzEvTRHB.lottie" width="100% " height="100%"></iframe> 
+   
+  </div>
+    <div class="col-md-5 pt-5  text-center"> 
+      <p>Enjoy safe and fast delivery within and outside the city. Track your order every step of the way, with multiple payment options including cash on delivery or online payment.
+
+      </p>
+    </div>
+  </div>
+  <br>
+  <br>
+  <div class="row   "  dir="ltr">
+
+    <div class="col-md-6 col-sm-12   text-center">
+        <h5 class="text-danger">After-Sales Support & Customer Care
+        </h5>
+     <iframe src="https://lottie.host/embed/d628d7fb-c2db-4421-bf10-878066a20b64/0YQerbPF5L.lottie" width="100% " height="100%"></iframe> 
+     
+    </div>
+      <div class="col-md-5 pt-5  text-center"> 
+        <p>We care about your experience even after your purchase. Our dedicated support team is ready to assist you with any issues, technical questions, or product concerns. We also offer a flexible return and exchange policy to ensure your satisfaction.
+
+        </p>
+      </div>
+    </div>
+    
+
+</div>
+</section>  
+
+<section id="Order"  class="mt-5  mb-5">
+  <div class="container">
+<div class="container border border-2 mt-5 rounded  ">
+  <div class="d-flex justify-content-center "> 
+    <h2 class="order text-header   d-inline-block mt-3"> order </h2>  
+  </div>
+
+
+
+  <div class="row mt-4">
+
+<div class="col">
+<label class="">name</label>
+<input type=" text"  class="form-control">
+
+ </div>
+ <div class="col">
+
+
+  <label class="">email</label>
+<input type=" text"  class="form-control">
+
+ </div>
+</div>
+  <div class="row  mt-4">
+
+    <div class="col">
+
+      <label class="">phone </label>
+      <input type=" text"  class="form-control">
+
+    </div>
+
+    <div class="col">
+
+      <label class="">address</label>
+      <input type=" text"  class="form-control">
+
+    </div>
+      </div>
+
+      <div class="row  mt-4">
+
+        <div class="col">
+<label for="">details</label>
+<textarea class="form-control"></textarea>
+
+        </div>
+          </div>
+
+          <div class="row  mt-5  mb-5 text-center">
+
+            <div class="col">
+  <button class="btn btn-primary w-25   text-center">subment</button>
+    
+            </div>
+              </div>
+</div>
+</section>
+
+
+<footer id="About"><div class="container bg-black d-flex text-light">
+  <div class="row">
+<div class="col-12 me-3">
+  <h2>about</h2>
+ <p><i class="fa-solid fa-envelope"></i>  yahiapro400@gmail.com</p>
+ <p><i class="fa-solid fa-phone"></i> 000 000 0000</p>
+
+ <p><i class="fa-solid fa-clock"></i> Working Hours: Daily from 9 AM to 10 PM</p>
+ </div>
+</div>
+ <br>
+ <br>
+ <div class="row">
+ <div class="col-12 " >
+  <br>
+<p >Follow us
+  
+</p>
+<i class="fa-brands fa-facebook"></i>
+<i class="fa-brands fa-instagram"></i>
+<a href="https://github.com/iiyahia"><i class="fa-brands fa-github   "></i></a>
+
+
+
+
+
+</div>
+</div>
+  </div>
+</footer>
+
+
+
+
+
+
+
+<!-- modal 1 -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">watch</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+
+
+<div class="row"> 
+
+<div class="col">
+
+
+  <div id="carouselExample" class="carousel slide ">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="img/4.jpg" class="d-block h-25 w-100" style="height: 300px !important;" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="img/5.jpg" class="d-block h-25 w-100" style="height: 300px !important;"alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="img/6.jpg" class="d-block h-25 w-100" style="height: 300px !important;"alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+      <i class="fa-solid fa-angles-left myicon"></i>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+      <i class="fa-solid fa-angles-right myicon" ></i>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div>
+
+
+
+
+<div class="col">
+  
+<br>
+<br>
+
+    <p>
+    watch
+  </p>
+  
+  <p>100$</p>
+  <br>
+  <br>
+ <br>
+
+ <button class="btn btn-primary p-2   add-to-cart   "data-name="watch 1"data-price="100$" data-img="img/4.jpg"add>  <span>Add to cart</span> <i class="fa-solid fa-cart-shopping"></i></button>
+  
+
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary btn-primary" data-bs-dismiss="modal">Close</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-JobWAqYk5CSjWuVV3mxgS+MmccJqkrBaDhk8SKS1BW+71dJ9gzascwzW85UwGhxiSyR7Pxhu50k+Nl3+o5I49A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="js/isotope.pkgd.js"></script>
+<script src="js/1.js"></script>
+ <script src="js/all.main.js"></script> 
+    <script src="js/bootstrap.bundle.min.js" ></script>
+ 
+ 
+
+</body>
+</html>
