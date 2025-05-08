@@ -9,10 +9,12 @@
   padding-top: 70px !important;
 }
 .carousel-item img{
-    height: 100vh !important;
+    height:70vh !important;
   
 
 }
+
+
 .carousel-indicators button{
     width: 20px  !important;
     height: 20px !important;
