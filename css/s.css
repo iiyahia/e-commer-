@@ -8,11 +8,7 @@
 .body{
   padding-top: 70px !important;
 }
-.carousel-item img {
-    height:100vh !important;
-  
 
-}
 
 
 .carousel-indicators button{
@@ -315,3 +311,5 @@ footer{
 ::-webkit-scrollbar-thumb:hover {
   background: red ; 
 }
+
+
